@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-stack {
+    position: absolute;
+    /* max-height: 90vh; */
+    top:10%;
+    left:40%;
+  }
+  
+  .body-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 90vh;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .base {
+    opacity: 1 !important; /* Base always visible */
+    z-index: 1;
+  }
+  
+  .highlight {
+    z-index: 2; /* Always above base */
+  }
+  
+  .hotspot {
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    /* background: rgba(0, 255, 150, 0.25); */
+    /* border: 1px solid #0f0; */
+    transition: transform 0.2s;
+    z-index: 5;
+  }
+  
+  .hotspot:hover {
+    transform: scale(1.2);
+    /* background: rgba(0, 255, 150, 0.5); */
+  }
+  
+  .panel {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 40%;
+    height: 100%;
+    background: #111;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.6);
+    transition: right 0.8s ease;
+    overflow-y: auto;
+    z-index: 10;
+  }
+  
+  .panel.active {
+    right: 0;
+  }
+  
+  .exercise {
+    background: #222;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: limegreen;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  

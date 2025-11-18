@@ -149,7 +149,7 @@ pricingBtn.addEventListener("click", () => {
 
 
 servicesBtn.addEventListener("click", () => {
-  document.location.href="index.html";
+  document.location.href="3d.html";
 });
 
 trainerBtn.addEventListener("click", () => {
@@ -168,7 +168,7 @@ window.addEventListener("DOMContentLoaded", () => {
       `Welcome back, ${userData.email}!`;
   } else {
     // if no user found, redirect to login
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
 });
 

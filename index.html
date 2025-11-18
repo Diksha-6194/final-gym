@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Gym Body</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | PEHELWAAN</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <!-- Image Layers -->
-    <div class="image-stack">
-      <!-- Base Image (always visible) -->
-      <img src="normal.jpeg" class="body-img base" alt="Normal Body">
-
-      <!-- Highlight Images -->
-      <img src="chest.jpeg" class="body-img highlight chest" alt="Chest">
-      <img src="shoulders.jpeg" class="body-img highlight shoulders" alt="Shoulders">
-      <img src="biceps.jpeg" class="body-img highlight biceps" alt="Biceps">
-      <img src="core.jpeg" class="body-img highlight abs" alt="Abs">
- 
-      <img src="quads.jpeg" class="body-img highlight legs" alt="Legs">
+  <div class="login-container">
+    <div class="login-box">
+      <h1 class="logo">PEHELWAAN</h1>
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Login to continue your journey</p>
+      <form>
+        <div class="input-group">
+          <label for="email">Username</label>
+          <input type="input" id="email" placeholder="Enter your username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+        <button type="submit" class="btn" id="butt">Login</button>
+      </form>
+      
     </div>
-
-    <!-- Hotspots -->
-    <div class="hotspot" data-part="chest" style="top: 28%; left: 48%; width: 120px; height: 80px;"></div>
-    <div class="hotspot" data-part="shoulders" style="top: 25%; left: 42%; width: 90px; height: 70px;"></div>
-    <div class="hotspot" data-part="shoulders" style="top: 25%; left: 56%; width: 90px; height: 70px;"></div>
-    <div class="hotspot" data-part="biceps" style="top: 33%; left: 42%; width: 80px; height: 80px;"></div>
-    <div class="hotspot" data-part="biceps" style="top: 33%; left: 58%; width: 80px; height: 80px;"></div>
-    <div class="hotspot" data-part="abs" style="top: 39%; left: 50%; width: 80px; height: 120px;"></div>
-    <div class="hotspot" data-part="legs" style="top: 55%; left: 47%; width: 150px; height: 200px;"></div>
   </div>
-
-  <!-- Right Panel -->
-  <div class="panel" id="panel">
-    <h2 id="panelTitle">Workouts</h2>
-    <div id="exerciseList"></div>
-    <button onclick="goBack()">Back</button>
-  </div>
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
